@@ -257,18 +257,30 @@ footer {
 /* Responsividade para telas pequenas */
 @media (max-width: 768px) {
 body {
-  padding-top: 450px;
+  font-family: 'Poppins', sans-serif;
+  background: #0d1117;
+  color: #f0f6fc;
+  line-height: 1.6;
+  padding: 20px;
+  overflow-x: hidden;
 }
 
 .navbar {
-  position: fixed;    /* fixa a navbar no topo SEMPRE */
+  position:flex;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
-  z-index: 1000;
-  transition: background-color 0.3s ease, top 0.3s ease;
+  background-color: #0d1117;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #00ffc8;
+  box-shadow: 0 4px 20px rgba(0, 255, 200, 0.1);
+  transition: top 0.3s ease;
 }
+
 .navbar.scrolled {
   background-color: #161b22; /* cor da página quando rolada */
   box-shadow: 0 4px 20px rgba(0, 255, 200, 0.2);
