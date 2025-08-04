@@ -254,16 +254,10 @@ footer {
     align-items: center;
   }
 
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
   .logo-container {
     flex-direction: column;
     gap: 5px;
+    align-items: center;
   }
 
   .logo {
@@ -272,5 +266,33 @@ footer {
 
   .brand-name {
     font-size: 1.2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: stretch; /* Isso estica os <li> */
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #333;
+    background-color: #e0ffe0;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .nav-links a.active {
+    background-color: #c3f7c3;
+    color: #006400;
   }
 }
