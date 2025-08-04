@@ -256,8 +256,28 @@ footer {
 
 /* Responsividade para telas pequenas */
 @media (max-width: 768px) {
+body {
+  padding-top: 450px;
+}
 
+.navbar {
+  position: fixed;    /* fixa a navbar no topo SEMPRE */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, top 0.3s ease;
+}
+.navbar.scrolled {
+  background-color: #161b22; /* cor da página quando rolada */
+  box-shadow: 0 4px 20px rgba(0, 255, 200, 0.2);
+}
 
+/* Quando escondida, sobe pra fora da tela */
+.navbar.hidden {
+  top: -100px;
+}
   .logo-container {
     flex-direction: column;
     gap: 5px;
