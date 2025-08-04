@@ -35,17 +35,24 @@ img {
 
 /* Navegação */
 .navbar {
+  position:flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #0d1117;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 20px;
-  background-color: #0d1117;
   border-bottom: 2px solid #00ffc8;
   box-shadow: 0 4px 20px rgba(0, 255, 200, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+.navbar.hidden {
+  top: -150px;
 }
 
 .logo-container {
@@ -249,15 +256,7 @@ footer {
 
 /* Responsividade para telas pequenas */
 @media (max-width: 768px) {
-  .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #0d1117;
-  z-index: 9999;
-  transition: top 0.3s ease-in-out;
-}
+
 
   .logo-container {
     flex-direction: column;
@@ -301,3 +300,4 @@ footer {
     color: #006400;
   }
 }
+
