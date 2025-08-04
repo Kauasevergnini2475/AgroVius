@@ -238,37 +238,20 @@ footer {
 
 /* Responsividade para telas pequenas */
 @media (max-width: 768px) {
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #0d1117;
-  color: #f0f6fc;
-  line-height: 1.6;
-  padding: 20px;
-  overflow-x: hidden;
-}
+  .navbar {
+    position: absolute; /* Não fixa a barra no topo */
+    top: 0;
+    width: 100%;
+    background-color: #0d1117;
+    z-index: 999;
+    border-bottom: 2px solid #00ffc8;
+    padding: 15px;
+  }
 
-.navbar {
-  position:flex;
-  background-color: #0d1117;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  border-bottom: 2px solid #00ffc8;
-  box-shadow: 0 4px 20px rgba(0, 255, 200, 0.1);
-  transition: top 0.3s ease;
-}
+  body {
+    padding-top: 450px; /* Remove padding extra no topo */
+  }
 
-.navbar.scrolled {
-  background-color: #161b22; /* cor da página quando rolada */
-  box-shadow: 0 4px 20px rgba(0, 255, 200, 0.2);
-}
-
-/* Quando escondida, sobe pra fora da tela */
-.navbar.hidden {
-  top: -100px;
-}
   .logo-container {
     flex-direction: column;
     gap: 5px;
