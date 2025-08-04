@@ -59,5 +59,23 @@
     <p>&copy; 2025 AgroVius. Todos os direitos reservados.</p>
   </footer>
 
+   <script>
+  let lastScrollTop = 0;
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scroll pra baixo — esconde nav
+      navbar.style.top = '-200px'; // ajuste conforme a altura do nav
+    } else {
+      // Scroll pra cima — mostra nav
+      navbar.style.top = '0';
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // evita valores negativos
+  });
+</script>
 </body>
 </html>
