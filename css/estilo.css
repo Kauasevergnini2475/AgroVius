@@ -246,3 +246,15 @@ footer {
   font-size: 2.5rem;
   color: #f3eeee;
 }
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu li {
+    margin: 5px 0;
+  }
+}
