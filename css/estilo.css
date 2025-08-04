@@ -289,9 +289,5 @@ footer {
     border-bottom: 1px solid #ccc;
   }
 
-  .nav-links a.active {
-    background-color: #c3f7c3;
-    color: #006400;
-  }
 }
 
